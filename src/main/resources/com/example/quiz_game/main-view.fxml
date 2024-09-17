@@ -11,7 +11,7 @@
          <children>
             <Button layoutX="49.0" layoutY="48.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="250.0" text="Start game" />
             <Button layoutX="49.0" layoutY="101.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="250.0" text="Creator" />
-            <Button layoutX="49.0" layoutY="154.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="250.0" text=" Settings" />
+            <Button id="settings_btn" layoutX="49.0" layoutY="154.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="250.0" text=" Settings" onAction="#onSettingsBtnClick"/>
             <Button layoutX="49.0" layoutY="208.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="250.0" text="Credits" />
             <Button  id="exit_btn" layoutX="49.0" layoutY="261.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="250.0" text="Exit" onAction="#onExitBtnClick" />
          </children>
