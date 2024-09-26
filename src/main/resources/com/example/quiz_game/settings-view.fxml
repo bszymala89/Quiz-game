@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -9,8 +10,10 @@
    <children>
       <AnchorPane prefHeight="415.0" prefWidth="347.0">
          <children>
-            <CheckBox id="fullscreen_checkbox" layoutX="137.0" layoutY="31.0" mnemonicParsing="false" onAction="#onCheckboxClick" text="Fullscreen" />
-            <Button id="back_btn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" onAction="#onExitBtnClick" />
+            <CheckBox id="maximizeCheckbox" layoutX="137.0" layoutY="31.0" mnemonicParsing="false" onAction="#onMaximizescreenCheckboxClick" text="Maximize" />
+            <Button id="backBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onExitBtnClick" text="Back" />
+            <ComboBox fx:id="resolutionComboBox" layoutX="98.0" layoutY="69.0" onAction="#onResolutionComboBoxClick" prefWidth="150.0" promptText="Resolution" />
+            <Button id="applyBtn" layoutX="11.0" layoutY="322.0" mnemonicParsing="false" text="Apply" onAction="#onApplyBtnClick" />
          </children>
       </AnchorPane>
    </children>
