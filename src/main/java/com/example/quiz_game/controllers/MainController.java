@@ -28,5 +28,8 @@ public class MainController {
         settingsStage.setTitle("Settings");
         settingsStage.setScene(scene);
         settingsStage.show();
+
+        SettingsController settingsController = fxmlLoader.getController();
+        settingsController.setStage(settingsStage);
     }
 }
