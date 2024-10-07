@@ -14,6 +14,8 @@ public class MainController {
     @FXML
     private Label welcomeText;
 
+    private Stage mainStage;
+
     @FXML
     protected void onExitBtnClick() {
         Platform.exit();
@@ -30,6 +32,12 @@ public class MainController {
         settingsStage.show();
 
         SettingsController settingsController = fxmlLoader.getController();
-        settingsController.setStage(settingsStage);
+        settingsController.setStage(mainStage);
+
+
+    }
+
+    public void setMainStage(Stage stage) {
+        this.mainStage = stage;
     }
 }
