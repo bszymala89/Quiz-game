@@ -33,9 +33,19 @@ public class MainController {
 
         SettingsController settingsController = fxmlLoader.getController();
         settingsController.setStage(mainStage);
-
-
     }
+
+    @FXML
+    protected void onCreatorBtnClick() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("creator-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 680, 670);
+        Stage creatorStage = new Stage();
+        creatorStage.setTitle("Creator");
+        creatorStage.setScene(scene);
+        creatorStage.show();
+    }
+
+
 
     public void setMainStage(Stage stage) {
         this.mainStage = stage;
