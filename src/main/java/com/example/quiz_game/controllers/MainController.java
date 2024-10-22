@@ -1,6 +1,7 @@
 package com.example.quiz_game.controllers;
 
 import com.example.quiz_game.MainApplication;
+import com.example.quiz_game.utils.JsonUtils;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -43,6 +44,11 @@ public class MainController {
         creatorStage.setTitle("Creator");
         creatorStage.setScene(scene);
         creatorStage.show();
+    }
+
+    @FXML
+    protected void onStartGameBtnClick() throws IOException {
+        System.out.println(JsonUtils.readFromJson("src/main/java/test.json"));
     }
 
 

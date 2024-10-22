@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quiz_game.controllers.CreateQuizController">
    <children>
       <AnchorPane prefHeight="711.0" prefWidth="600.0">
          <children>
             <TextField layoutX="226.0" layoutY="29.0" promptText="Name of the quiz" />
             <Button layoutX="275.0" layoutY="634.0" mnemonicParsing="false" text="Create" />
-            <Button layoutX="138.0" layoutY="585.0" mnemonicParsing="false" text="Add question" />
+            <Button layoutX="138.0" layoutY="585.0" mnemonicParsing="false" text="Add question" onAction="#onAddQuestionBtnClick" />
             <Button layoutX="375.0" layoutY="585.0" mnemonicParsing="false" text="Delete question" />
             <TableView layoutX="44.0" layoutY="104.0" prefHeight="441.0" prefWidth="513.0">
               <columns>

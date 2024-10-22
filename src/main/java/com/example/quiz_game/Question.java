@@ -1,12 +1,12 @@
 package com.example.quiz_game;
 
 public class Question {
-    private String question;
-    private String optionA;
-    private String optionB;
-    private String optionC;
-    private String optionD;
-    private String answer;
+    public String question;
+    public String optionA;
+    public String optionB;
+    public String optionC;
+    public String optionD;
+    public String answer;
 
     public Question(String question, String optionA, String optionB, String optionC, String optionD, String answer) {
         this.question = question;
@@ -63,5 +63,17 @@ public class Question {
 
     public void setAnswer(String answer) {
         this.answer = answer;
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "question='" + question + '\'' +
+                ", optionA='" + optionA + '\'' +
+                ", optionB='" + optionB + '\'' +
+                ", optionC='" + optionC + '\'' +
+                ", optionD='" + optionD + '\'' +
+                ", answer='" + answer + '\'' +
+                '}';
     }
 }
