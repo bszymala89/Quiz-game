@@ -1,6 +1,7 @@
 module com.example.quiz_game {
     requires javafx.controls;
     requires javafx.fxml;
+    requires com.google.gson;
 
 
     opens com.example.quiz_game to javafx.fxml;
