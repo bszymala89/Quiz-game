@@ -34,7 +34,6 @@ public class SettingsController {
 
     @FXML
     protected void onApplyBtnClick() {
-        //to do add split to string and string to values for resolution
         String res = resolutionComboBox.getValue();
         String[] restab;
 
