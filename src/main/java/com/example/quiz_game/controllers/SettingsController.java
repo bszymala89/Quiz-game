@@ -17,6 +17,10 @@ public class SettingsController {
     @FXML
     private ComboBox<String> resolutionComboBox;
 
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
     @FXML
     public void initialize() {
         resolutionComboBox.getItems().addAll("640×480", "960×540", "1280×720", "1920×1080", "2048×1080", "2560×1440", "3840×2160" );
@@ -51,9 +55,5 @@ public class SettingsController {
     @FXML
     protected void onResolutionComboBoxClick() {
 
-    }
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
     }
 }

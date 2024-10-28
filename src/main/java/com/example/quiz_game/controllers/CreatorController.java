@@ -17,5 +17,6 @@ public class CreatorController {
         createQuizStage.setTitle("Create Quiz");
         createQuizStage.setScene(scene);
         createQuizStage.show();
+        //CreateQuizController.loadTableColumns();
     }
 }
