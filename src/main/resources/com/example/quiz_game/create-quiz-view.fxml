@@ -16,14 +16,14 @@
             <Button layoutX="275.0" layoutY="634.0" mnemonicParsing="false" text="Create" />
             <Button layoutX="138.0" layoutY="585.0" mnemonicParsing="false" text="Add question" onAction="#onAddQuestionBtnClick" />
             <Button layoutX="375.0" layoutY="585.0" mnemonicParsing="false" text="Delete question" />
-            <TableView layoutX="44.0" layoutY="104.0" prefHeight="441.0" prefWidth="513.0">
+            <TableView fx:id="questionsTableView" layoutX="44.0" layoutY="104.0" prefHeight="441.0" prefWidth="513.0">
               <columns>
-                <TableColumn prefWidth="188.0" text="Question" />
-                <TableColumn prefWidth="72.0" text="OptionA" />
-                  <TableColumn prefWidth="65.0" text="OptionB" />
-                  <TableColumn prefWidth="65.0" text="OptionC" />
-                  <TableColumn prefWidth="60.0" text="OptionD" />
-                  <TableColumn prefWidth="61.0" text="Answer" />
+                <TableColumn fx:id="questionColumn" prefWidth="188.0" text="Question" />
+                <TableColumn fx:id="optionAColumn" prefWidth="72.0" text="OptionA" />
+                  <TableColumn fx:id="optionBColumn" prefWidth="65.0" text="OptionB" />
+                  <TableColumn fx:id="optionCColumn" prefWidth="65.0" text="OptionC" />
+                  <TableColumn fx:id="optionDColumn" prefWidth="60.0" text="OptionD" />
+                  <TableColumn fx:id="answerColumn" prefWidth="61.0" text="Answer" />
               </columns>
             </TableView>
             <Button layoutX="258.0" layoutY="585.0" mnemonicParsing="false" text="Edit question" />
