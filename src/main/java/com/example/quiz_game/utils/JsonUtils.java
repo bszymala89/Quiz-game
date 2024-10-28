@@ -2,6 +2,7 @@ package com.example.quiz_game.utils;
 
 import com.example.quiz_game.Question;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonUtils {
-    private static final Gson gson = new Gson();
+    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 
     public static List<Question> readFromJson(String path) throws IOException {
