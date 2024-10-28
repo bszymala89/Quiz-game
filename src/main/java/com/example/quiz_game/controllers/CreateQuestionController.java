@@ -3,6 +3,7 @@ package com.example.quiz_game.controllers;
 import com.example.quiz_game.Question;
 import com.example.quiz_game.utils.JsonUtils;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
 
 import java.io.File;
@@ -22,11 +23,17 @@ public class CreateQuestionController {
     @FXML
     private TextField answer;
 
+    private CreateQuizController createQuizController;
+
+    public void setCreateQuizController(CreateQuizController createQuizController) {
+        this.createQuizController = createQuizController;
+    }
+
     @FXML
     protected void onCreateBtnClick() throws IOException {
-        File file1 = new File("src/main/java/test.json");
+        //File file1 = new File("src/main/resources/com/example/quiz_game/test.json");
         Question question1 = new Question(question.getText(), optionA.getText(), optionB.getText(), optionC.getText(), optionD.getText(), answer.getText());
-        System.out.println(JsonUtils.readFromJson("src/main/java/test.json"));
-        JsonUtils.saveToJson("src/main/java/test.json", question1);
+        JsonUtils.saveToJson("src/main/resources/com/example/quiz_game/test.json", question1);
+        createQuizController.refreshQuestions();
     }
 }
