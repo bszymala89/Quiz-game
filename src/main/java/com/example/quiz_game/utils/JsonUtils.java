@@ -1,10 +1,10 @@
 package com.example.quiz_game.utils;
 
 import com.example.quiz_game.Question;
+import com.example.quiz_game.Quiz;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.stream.JsonReader;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -28,13 +28,19 @@ public class JsonUtils {
             return questionList;
         }
     }
-    public static void saveToJson(String path, Question question) throws IOException {
+    public static void saveQuestionToJson(String path, Question question) throws IOException {
         List<Question> questionList = readFromJson(path);
         try(Writer writer = Files.newBufferedWriter(Paths.get(path));) {
             questionList.add(question);
             gson.toJson(questionList, writer);
             writer.flush();
-            writer.close();
+        }
+    }
+
+    public static void saveQuizToJson(String path, Quiz quiz) throws IOException {
+        try(Writer writer = Files.newBufferedWriter(Paths.get(path));) {
+            gson.toJson(quiz.getQuestionsList(), writer);
+            writer.flush();
         }
     }
 }
