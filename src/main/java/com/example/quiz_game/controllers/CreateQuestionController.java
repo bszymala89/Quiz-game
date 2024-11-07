@@ -3,10 +3,8 @@ package com.example.quiz_game.controllers;
 import com.example.quiz_game.Question;
 import com.example.quiz_game.utils.JsonUtils;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
 
-import java.io.File;
 import java.io.IOException;
 
 public class CreateQuestionController {
@@ -33,7 +31,7 @@ public class CreateQuestionController {
     protected void onCreateBtnClick() throws IOException {
         //File file1 = new File("src/main/resources/com/example/quiz_game/test.json");
         Question question1 = new Question(question.getText(), optionA.getText(), optionB.getText(), optionC.getText(), optionD.getText(), answer.getText());
-        JsonUtils.saveToJson("src/main/resources/com/example/quiz_game/test.json", question1);
+        JsonUtils.saveQuestionToJson("src/main/resources/com/example/quiz_game/test.json", question1);
         createQuizController.refreshQuestions();
     }
 }

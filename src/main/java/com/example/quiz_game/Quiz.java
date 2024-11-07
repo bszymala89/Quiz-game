@@ -16,4 +16,12 @@ public class Quiz {
     public void addQuestion(Question question) {
         questionsList.add(question);
     }
+
+    public List<Question> getQuestionsList() {
+        return questionsList;
+    }
+
+    public void setQuestionsList(List<Question> questionsList) {
+        this.questionsList = questionsList;
+    }
 }
