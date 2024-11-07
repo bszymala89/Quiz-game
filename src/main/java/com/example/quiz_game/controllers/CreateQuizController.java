@@ -94,7 +94,7 @@ public class CreateQuizController implements Initializable {
             System.out.println("Quiz needs to have a name");
             return;
         }
-        String path = "src/main/resources/com/example/quiz_game/" + nameField.getText() + ".json";
+        String path = "src/main/resources/com/example/quiz_game/quizes/" + nameField.getText() + ".json";
         Quiz quiz = new Quiz(selectedQuestionsList, nameField.getText());
         try {
            JsonUtils.saveQuizToJson(path, quiz);

@@ -38,3 +38,4 @@ build/
 .DS_Store
 
 /Creator.png
+/src/main/resources/com/example/quiz_game/quizes
