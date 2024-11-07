@@ -12,10 +12,11 @@
    <children>
       <AnchorPane prefHeight="711.0" prefWidth="600.0">
          <children>
-            <TextField layoutX="226.0" layoutY="29.0" promptText="Name of the quiz" />
-            <Button layoutX="275.0" layoutY="634.0" mnemonicParsing="false" text="Create" />
+            <TextField fx:id="nameField" layoutX="226.0" layoutY="29.0" promptText="Name of the quiz" />
+            <Button layoutX="275.0" layoutY="634.0" mnemonicParsing="false" text="Create" onAction="#onCreateBtnClick"/>
             <Button layoutX="138.0" layoutY="585.0" mnemonicParsing="false" text="Add question" onAction="#onAddQuestionBtnClick" />
             <Button layoutX="375.0" layoutY="585.0" mnemonicParsing="false" text="Delete question" />
+             <Button layoutX="258.0" layoutY="585.0" mnemonicParsing="false" text="Edit question" onAction="#onEditQuestionBtnClick"/>
             <TableView fx:id="questionsTableView" layoutX="44.0" layoutY="104.0" prefHeight="441.0" prefWidth="513.0">
               <columns>
                 <TableColumn fx:id="questionColumn" prefWidth="188.0" text="Question" />
@@ -26,7 +27,6 @@
                   <TableColumn fx:id="answerColumn" prefWidth="61.0" text="Answer" />
               </columns>
             </TableView>
-            <Button layoutX="258.0" layoutY="585.0" mnemonicParsing="false" text="Edit question" />
          </children>
       </AnchorPane>
    </children>
