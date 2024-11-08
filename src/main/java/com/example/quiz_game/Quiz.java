@@ -24,4 +24,12 @@ public class Quiz {
     public void setQuestionsList(List<Question> questionsList) {
         this.questionsList = questionsList;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

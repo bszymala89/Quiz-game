@@ -112,6 +112,5 @@ public class CreateQuizController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

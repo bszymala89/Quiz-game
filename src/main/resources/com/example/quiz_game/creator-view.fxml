@@ -13,9 +13,9 @@
             <Button layoutX="257.0" layoutY="467.0" mnemonicParsing="false" text="Edit quiz" />
             <Button layoutX="76.0" layoutY="467.0" mnemonicParsing="false" onAction="#onCreateQuizBtnClick" text="Create quiz" />
             <Button layoutX="406.0" layoutY="467.0" mnemonicParsing="false" text="Delete quiz" />
-            <TableView layoutX="34.0" layoutY="51.0" prefHeight="383.0" prefWidth="508.0">
+            <TableView fx:id="quizTableView" layoutX="34.0" layoutY="51.0" prefHeight="383.0" prefWidth="508.0">
               <columns>
-                <TableColumn prefWidth="441.0" text="Name" />
+                <TableColumn fx:id="nameColumn" prefWidth="441.0" text="Name" />
                 <TableColumn prefWidth="66.0" text="Questions" />
               </columns>
             </TableView>
