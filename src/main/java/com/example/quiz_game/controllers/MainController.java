@@ -48,7 +48,15 @@ public class MainController {
 
     @FXML
     protected void onStartGameBtnClick() throws IOException {
-        System.out.println(JsonUtils.readFromJson("src/main/java/test.json"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("quiz-selection-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 680, 670);
+        Stage creatorStage = new Stage();
+        creatorStage.setTitle("Quiz selection");
+        creatorStage.setScene(scene);
+        creatorStage.show();
+
+        QuizSelectionController quizSelectionController = fxmlLoader.getController();
+        quizSelectionController.setStage(mainStage);
     }
 
 
