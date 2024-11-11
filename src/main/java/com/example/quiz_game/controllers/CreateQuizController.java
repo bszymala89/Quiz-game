@@ -14,11 +14,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -106,7 +103,7 @@ public class CreateQuizController implements Initializable {
 
     public void refreshQuestions() {
         try {
-            List<Question> questionList = JsonUtils.readFromJson("src/main/resources/com/example/quiz_game/test.json");
+            List<Question> questionList = JsonUtils.readQuestionsFromJson("src/main/resources/com/example/quiz_game/test.json");
             observableList = FXCollections.observableArrayList(questionList);
             questionsTableView.setItems(observableList);
         } catch (IOException e) {
