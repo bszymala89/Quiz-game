@@ -17,7 +17,7 @@ public class JsonUtils {
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 
-    public static List<Question> readFromJson(String path) throws IOException {
+    public static List<Question> readQuestionsFromJson(String path) throws IOException {
         try(FileReader reader = new FileReader(path)) {
             Type questionListType = new TypeToken<List<Question>>() {}.getType();
             List<Question> questionList = gson.fromJson(reader, questionListType);
@@ -28,8 +28,18 @@ public class JsonUtils {
             return questionList;
         }
     }
+
+    public static Quiz readQuizFromJson(String path) throws IOException {
+        try(FileReader reader = new FileReader(path)) {
+            Type quizType = new TypeToken<Quiz>() {}.getType();
+            Quiz quiz = gson.fromJson(reader, quizType);
+            reader.close();
+            return quiz;
+        }
+    }
+
     public static void saveQuestionToJson(String path, Question question) throws IOException {
-        List<Question> questionList = readFromJson(path);
+        List<Question> questionList = readQuestionsFromJson(path);
         try(Writer writer = Files.newBufferedWriter(Paths.get(path));) {
             questionList.add(question);
             gson.toJson(questionList, writer);
