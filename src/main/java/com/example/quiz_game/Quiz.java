@@ -7,6 +7,9 @@ public class Quiz {
     private List<Question> questionsList;
     private String name;
 
+    public Quiz() {
+    }
+
     public Quiz(List<Question> questionsList, String name) {
         this.questionsList = questionsList;
         this.name = name;

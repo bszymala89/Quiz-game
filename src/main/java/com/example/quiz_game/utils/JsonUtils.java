@@ -30,11 +30,9 @@ public class JsonUtils {
     }
 
     public static Quiz readQuizFromJson(String path) throws IOException {
+        //Type questionListType = new TypeToken<List<Question>>() {}.getType();
         try(FileReader reader = new FileReader(path)) {
-            Type quizType = new TypeToken<Quiz>() {}.getType();
-            Quiz quiz = gson.fromJson(reader, quizType);
-            reader.close();
-            return quiz;
+            return gson.fromJson(reader, Quiz.class);
         }
     }
 
