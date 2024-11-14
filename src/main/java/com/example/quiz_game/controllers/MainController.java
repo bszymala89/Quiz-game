@@ -1,7 +1,6 @@
 package com.example.quiz_game.controllers;
 
 import com.example.quiz_game.MainApplication;
-import com.example.quiz_game.utils.JsonUtils;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,8 +11,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MainController {
-    @FXML
-    private Label welcomeText;
 
     private Stage mainStage;
 
