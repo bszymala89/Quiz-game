@@ -50,13 +50,12 @@ public class MainController {
     protected void onStartGameBtnClick() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("quiz-selection-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 680, 670);
-        Stage creatorStage = new Stage();
-        creatorStage.setTitle("Quiz selection");
-        creatorStage.setScene(scene);
-        creatorStage.show();
-
+        Stage quizSelectionStage = new Stage();
+        quizSelectionStage.setTitle("Quiz selection");
+        quizSelectionStage.setScene(scene);
         QuizSelectionController quizSelectionController = fxmlLoader.getController();
-        quizSelectionController.setStage(mainStage);
+        quizSelectionController.setStage(quizSelectionStage);
+        quizSelectionStage.show();
     }
 
 
