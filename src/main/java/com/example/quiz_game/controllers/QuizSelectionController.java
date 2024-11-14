@@ -1,7 +1,9 @@
 package com.example.quiz_game.controllers;
 
 import com.example.quiz_game.MainApplication;
+import com.example.quiz_game.Question;
 import com.example.quiz_game.Quiz;
+import com.example.quiz_game.utils.JsonUtils;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,38 +24,57 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class QuizSelectionController implements Initializable {
-    private Stage stage;
+public class QuizSelectionController {
     @FXML
-    private TableView<String> quizTableView;
+    private TableView<Quiz> quizTableView;
     @FXML
-    private TableColumn<String, String> nameColumn;
+    private TableColumn<Quiz, String> quizNameColumn;
     @FXML
     private Button playBtn;
+    private Stage stage;
 
-    private List<String> quizNamesList = new ArrayList<>();
+    private List<Quiz> quizList = new ArrayList<>();
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        nameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue()));
-        loadQuizes("src/main/resources/com/example/quiz_game/quizes");
-        quizTableView.setItems(FXCollections.observableArrayList(quizNamesList));
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    public void initialize() {
+        quizNameColumn.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        loadQuizzes();
+        quizTableView.setItems(FXCollections.observableArrayList(quizList));
 
     }
 
-    public void loadQuizes(String path) {
-        File f = new File(path);
-        String[] quizesFullNames = f.list();
-        for (int i = 0; i < quizesFullNames.length; i++) {
-            quizNamesList.add(quizesFullNames[i].substring(0, quizesFullNames[i].length() - 5));
+    private void loadQuizzes() {
+        String quizDirectoryPath = "src/main/resources/com/example/quiz_game/quizes";
+        File quizDirectory = new File(quizDirectoryPath);
+
+        if (quizDirectory.exists() && quizDirectory.isDirectory()) {
+            File[] files = quizDirectory.listFiles((dir, name) -> name.endsWith(".json"));
+
+            if (files != null) {
+                for (File file : files) {
+                    String quizName = file.getName().replace(".json", "");
+                    try {
+                        List<Question> questions = JsonUtils.readQuestionsFromJson(file.getPath());
+                        Quiz quiz = new Quiz(questions, quizName);
+                        quizList.add(quiz);
+                    } catch (IOException e) {
+                        System.err.println("Error reading quiz file: " + file.getName());
+                        e.printStackTrace();
+                    }
+                }
+            }
         }
     }
 
     @FXML
     protected void onPlayBtnClick() throws IOException {
-        String quizName = quizTableView.getSelectionModel().getSelectedItem();
-        if (quizName != null) {
-            startQuiz(quizName);
+        Quiz selectedQuiz = quizTableView.getSelectionModel().getSelectedItem();
+        if (selectedQuiz != null) {
+            startQuiz(selectedQuiz);
         }
     }
 
