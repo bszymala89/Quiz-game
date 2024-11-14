@@ -2,23 +2,14 @@ package com.example.quiz_game.controllers;
 
 import com.example.quiz_game.Question;
 import com.example.quiz_game.Quiz;
-import com.example.quiz_game.utils.JsonUtils;
 import javafx.animation.PauseTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Objects;
-import java.util.ResourceBundle;
 
 public class GameController {
     @FXML
