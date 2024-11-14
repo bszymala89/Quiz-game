@@ -57,23 +57,16 @@ public class QuizSelectionController implements Initializable {
         }
     }
 
-    public void startQuiz(String quizName) throws IOException {
+    public void startQuiz(Quiz quiz) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("game-view.fxml"));
-        System.out.println(quizName);
-        GameController gameController = fxmlLoader.getController();
-        gameController.setQuizName(quizName);
-        gameController.getQuizName();
-        System.out.println("scene");
         Scene scene = new Scene(fxmlLoader.load(), 680, 670);
-        System.out.println("stage");
-        Stage creatorStage = new Stage();
-        System.out.println("setting");
-        creatorStage.setTitle("Quiz selection");
-        creatorStage.setScene(scene);
-        creatorStage.show();
-    }
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
+        GameController gameController = fxmlLoader.getController();
+        gameController.setQuiz(quiz);
+        Stage quizStage = new Stage();
+        gameController.setStage(quizStage);
+        quizStage.setTitle("Game");
+        quizStage.setScene(scene);
+        quizStage.show();
+        stage.close();
     }
 }
