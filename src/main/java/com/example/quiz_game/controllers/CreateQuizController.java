@@ -60,7 +60,6 @@ public class CreateQuizController implements Initializable {
         createQuestionStage.setScene(scene);
         createQuestionController.setCreateQuizController(this);
         createQuestionStage.show();
-        System.out.println(questionsTableView.getSelectionModel().getSelectedItem().toString());
     }
 
     @FXML
@@ -76,7 +75,6 @@ public class CreateQuizController implements Initializable {
         editQuestionController.setCreateQuizController(this);
         //editQuestionController.setQuestion(questionsTableView.getSelectionModel().getSelectedItem());
         editQuestionController.setQuestion(new Question("testt question", "a", "b", "c", "d", "answer"));
-        System.out.println(editQuestionController.getQuestion().toString());
         editQuestionStage.show();
     }
 

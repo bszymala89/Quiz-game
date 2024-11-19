@@ -80,7 +80,7 @@ public class QuizSelectionController {
 
     public void startQuiz(Quiz quiz) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("game-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 680, 670);
+        Scene scene = new Scene(fxmlLoader.load(), 450, 335);
         GameController gameController = fxmlLoader.getController();
         gameController.setQuiz(quiz);
         Stage quizStage = new Stage();

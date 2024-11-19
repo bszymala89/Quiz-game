@@ -23,7 +23,7 @@ public class MainController {
     @FXML
     protected void onSettingsBtnClick() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("settings-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 340, 335);
+        Scene scene = new Scene(fxmlLoader.load(), 340, 355);
         Stage settingsStage = new Stage();
         settingsStage.setTitle("Settings");
         settingsStage.setScene(scene);
@@ -46,7 +46,7 @@ public class MainController {
     @FXML
     protected void onStartGameBtnClick() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("quiz-selection-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 680, 670);
+        Scene scene = new Scene(fxmlLoader.load(), 640, 350);
         Stage quizSelectionStage = new Stage();
         quizSelectionStage.setTitle("Quiz selection");
         quizSelectionStage.setScene(scene);

@@ -11,14 +11,14 @@ import java.io.IOException;
 
 public class MainApplication extends Application {
 
-    int res1 = 640;
-    int res2 = 480;
+    int res1 = 320;
+    int res2 = 380;
 
     @Override
     public void start(Stage mainStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), res1, res2);
-        mainStage.setTitle("Hello!");
+        mainStage.setTitle("Main Menu");
         mainStage.setScene(scene);
         mainStage.show();
 
