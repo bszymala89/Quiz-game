@@ -1,13 +1,5 @@
 [
   {
-    "question": "What is Java?",
-    "optionA": "A coffee",
-    "optionB": "A programming language",
-    "optionC": "An island",
-    "optionD": "A car",
-    "answer": "A programming language"
-  },
-  {
     "question": "What is 2 + 2?",
     "optionA": "3",
     "optionB": "4",
@@ -16,59 +8,43 @@
     "answer": "4"
   },
   {
-    "question": "q",
-    "optionA": "a",
-    "optionB": "b",
-    "optionC": "c",
-    "optionD": "d",
-    "answer": "an"
+    "question": "What is 3 + 8?",
+    "optionA": "5",
+    "optionB": "3",
+    "optionC": "8",
+    "optionD": "11",
+    "answer": "11"
   },
   {
-    "question": "test question",
-    "optionA": "oa",
-    "optionB": "ob",
-    "optionC": "oc",
-    "optionD": "od",
-    "answer": "test answer"
+    "question": "What is 9 + 12?",
+    "optionA": "3",
+    "optionB": "7",
+    "optionC": "21",
+    "optionD": "14",
+    "answer": "21"
   },
   {
-    "question": "question3",
-    "optionA": "a3",
-    "optionB": "b3",
-    "optionC": "c3",
-    "optionD": "d3",
-    "answer": "answer3"
+    "question": "What is 8 - 3?",
+    "optionA": "6",
+    "optionB": "5",
+    "optionC": "1",
+    "optionD": "2",
+    "answer": "5"
   },
   {
-    "question": "very cool question",
-    "optionA": "ao",
-    "optionB": "bo",
-    "optionC": "co",
-    "optionD": "do",
-    "answer": "answerer"
+    "question": "What is 19 - 8?",
+    "optionA": "11",
+    "optionB": "8",
+    "optionC": "10",
+    "optionD": "5",
+    "answer": "11"
   },
   {
-    "question": "questioon",
-    "optionA": "a",
-    "optionB": "bc",
-    "optionC": "c",
-    "optionD": "d",
-    "answer": "answerr"
-  },
-  {
-    "question": "work",
-    "optionA": "pls",
-    "optionB": "b",
-    "optionC": "c",
-    "optionD": "d",
-    "answer": "answerrr"
-  },
-  {
-    "question": "qu",
-    "optionA": "a",
-    "optionB": "b",
-    "optionC": "c",
-    "optionD": "d",
-    "answer": "answeererer"
+    "question": "What is 16 - 5?",
+    "optionA": "11",
+    "optionB": "7",
+    "optionC": "13",
+    "optionD": "3",
+    "answer": "11"
   }
 ]
